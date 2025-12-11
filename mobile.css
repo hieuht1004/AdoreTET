@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-    input {
+    input, textarea {
         font-size: 1rem;
     }
     select {
@@ -123,6 +123,11 @@
     }
 }
 @media screen and (max-width: 430px) {
+    .btn-form .btn_action {
+        width: 338px;
+        height: 72px;
+        background-size: 100%;
+    }
     .s5 .boxSlide .box:nth-child(1) .btn_action {
         left: 80px;
         bottom: 50px;
