@@ -118,6 +118,9 @@
         border: 0;
         border-radius: 0;
     }
+    .t-row3col div:nth-child(2) {
+        padding-top: 60px;
+    }
 }
 @media screen and (max-width: 430px) {
     .s5 .boxSlide .box:nth-child(1) .btn_action {
@@ -159,40 +162,40 @@
 }
 @media screen and (max-width: 393px) {
     .s5 .boxSlide .box:nth-child(1) .btn_action {
-        left: 20px;
+        left: 60px;
         bottom: 20px;
     }
     .s5 .boxSlide .box:nth-child(2) .btn_action {
-        left: 32px;
-        bottom: 20px;
+        left: 76px;
+        bottom: 50px;
     }
     .s5 .boxSlide .box:nth-child(3) .btn_action {
-        left: 122px;
-        bottom: 20px;
+        left: 190px;
+        bottom: 50px;
     }
     .s6 .boxSlide .box:nth-child(1) .btn_action {
-        left: 120px;
+        left: 190px;
         bottom: 20px;
     }
     .s6 .boxSlide .box:nth-child(2) .btn_action {
-        left: 124px;
-        bottom: 20px;
-    }
-    .s6 .boxSlide .box:nth-child(3) .btn_action {
-        left: 122px;
-        bottom: 20px;
-    }
-    .s7 .boxSlide .box:nth-child(1) .btn_action {
-        left: 124px;
+        left: 188px;
         bottom: 40px;
     }
+    .s6 .boxSlide .box:nth-child(3) .btn_action {
+        left: 185px;
+        bottom: 40px;
+    }
+    .s7 .boxSlide .box:nth-child(1) .btn_action {
+        left: 188px;
+        bottom: 50px;
+    }
     .s7 .boxSlide .box:nth-child(2) .btn_action {
-        left: 160px;
-        bottom: 80px;
+        left: 230px;
+        bottom: 120px;
     }
     .s7 .boxSlide .box:nth-child(3) .btn_action {
-        left: 105px;
-        bottom: 120px;
+        left: 140px;
+        bottom: 160px;
     }
 }
 
