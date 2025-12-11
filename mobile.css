@@ -137,4 +137,9 @@
         left: 105px;
         bottom: 120px;
     }
+    .shipping .form-group {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    }
 }
