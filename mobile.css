@@ -1,8 +1,45 @@
 @media screen and (max-width: 768px) {
+    img {
+        width: 100%;
+    }
     .s2 img {
         height: 200px;
     }
     .btn_action {
         scale: .6;
+    }
+    .mainform {
+        padding: 2rem 0 1rem 0;
+    }
+    .mainform01 {
+        width: 80%;
+    }
+    .preorderForm {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    .preorderForm .form-inline {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .t-row3col {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0 4rem;
+        margin-bottom: 4rem;
+    }
+    .t-row {
+        gap: 1rem;
+    }
+    .mainform_logo {
+        width: 120px;
+    }
+    .s4 {
+        width: 100%;
+        overflow: hidden;
+        display: grid;
+        justify-items: center;
+    }
+    .s4 img {
+        width: 115%;
     }
 }

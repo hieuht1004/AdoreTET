@@ -5,6 +5,10 @@ input, select, textarea {
     border: none;
     outline: none;
 }
+.preorderForm {
+    max-width: 720px;
+    color: white;
+}
 .preorderForm .form-inline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -20,12 +24,13 @@ textarea {
 }
 
 .add-btn {
-    background: #c9922d;
+    background: #FFCD6B;
     color: white;
     padding: 8px 15px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    color: black;
 }
 
 .remove-btn {
@@ -69,6 +74,7 @@ textarea {
     visibility: hidden;
     transition: all 0.35s ease;
     z-index: 9999;
+    text-align: center;
 }
 
 .toast.show {

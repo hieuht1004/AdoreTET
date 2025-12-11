@@ -8,6 +8,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 ul, li, ol {
     list-style-type: none;
@@ -24,43 +25,36 @@ body {
     position: relative;
 }
 .btn_action {
-    width: 300px;
-    height: 64px;
+    width: 394px;
+    height: 84px;
     background: url(../assets/button.png) center center no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
-    border-radius: 18px;
+    border-radius: 24px;
     transition: all ease-in-out .5s;
-    border-radius: 18px;
+    position: relative;
 }
 .btn_action img {
     position: absolute;
     width: auto;
-    opacity: 0;  
-    display: none;
 }
-.btn_action:hover, .btn_action:focus {
-    background: url(../assets/button_hover.png) center center no-repeat;
-    transform: translateY(-4px);
-}
-.btn_action:hover > img,
-.btn_action:focus > img {
-    opacity: 1;
-    display: block;
+.btn_action:hover,
+.btn_action:focus {
+    animation: pentalsL 2s ease-in-out infinite;
 }
 .pentalL {
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: 0px;
     animation: pentalsL 3s ease-in-out infinite;
     transition: all ease-in-out .5s;
 }
 .pentalM {
-    right: 20px;
+    right: 50px;
     bottom: -14px;
     animation: pentalsM 3s ease-in-out infinite;
     transition: all ease-in-out 1s;
 }
 .pentalS {
-    left: 10px;
+    left: 20px;
     top: -10px;
     animation: pentalsS 3s ease-in-out infinite;
     transition: all ease-in-out .2s;
@@ -92,30 +86,127 @@ body {
 
 .s1 {
     position: relative;
+    display: flex;
 }
 .s1 .btn_action {
     position: absolute;
-    bottom: 40px;
-    left: calc(50% - 150px);
+    bottom: 80px;
+    left: calc(50% - 197px);
 }
 .s2 {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+.s2bag {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    animation: pentalsL 2s ease-in-out infinite;
+}
+.s3 {
+    position: relative;
+    z-index: 1;
+    margin-top: -80px;
+}
+.s3ad {
+    position: absolute;
+}
+.s3ad01 {
+    left: 50px;
+    bottom: 200px;
+}
+.s3ad02 {
+    left: 200px;
+    bottom: -50px;
+    z-index: 2;
+}
+.s3ad03 {
+    left: 300px;
+    bottom: 400px;
+    z-index: 1;
+}
+.s3ad04 {
+    left: 700px;
+    bottom: 150px;
+    z-index: 1;
+}
+.s3photoframe {
+    right: 0;
+    top: 50%;
+    width: 500px;
+}
+.s4 {
     margin-top: -8px;
+}
+.s5 {
+    margin-top: -8px;
+}
+.s5 .boxSlide .btn_action,
+.s6 .boxSlide .btn_action,
+.s7 .boxSlide .btn_action {
+    position: absolute;
+    bottom: 200px;
+}
+.s5 .boxSlide .box:nth-child(1) .btn_action {
+    left: 400px;
+}
+.s5 .boxSlide .box:nth-child(2) .btn_action {
+    left: 460px;
+}
+.s5 .boxSlide .box:nth-child(3) .btn_action {
+    left: 870px;
+}
+.s6 .boxSlide .box:nth-child(1) .btn_action {
+    left: 870px;
+}
+.s6 .boxSlide .box:nth-child(2) .btn_action {
+    left: 870px;
+}
+.s6 .boxSlide .box:nth-child(3) .btn_action {
+    left: 870px;
+}
+.s7 .boxSlide .box:nth-child(1) .btn_action {
+    left: 870px;
+}
+.s7 .boxSlide .box:nth-child(2) .btn_action {
+    left: 1030px;
+    bottom: 600px;
+}
+.s7 .boxSlide .box:nth-child(3) .btn_action {
+    left: 650px;
+    bottom: 600px;
 }
 .boxSlide {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
-.boxSlide img {
-    width: auto;
+.boxSlide .box {
+    position: relative;
+    display: grid;
+}
+.custom-scrollable {
+    scrollbar-width: thin; 
+    scrollbar-color: #FFF0D3 black;
+}
+.s8 {
+    display: flex;
 }
 .mainform {
-    background: url(assets/mainformBG.png) top center no-repeat;
+    background: url(assets/mainformBG.png) top center no-repeat #550607;
     padding: 10rem 0 5rem 0;
     background-size: 100% auto;
 }
 .mainformcontainer {
     display: grid;
+    justify-items: center;
+}
+.t-row {
+    display: grid;
+    gap: 2rem;
     justify-items: center;
 }
 .t-row3col {
@@ -125,12 +216,4 @@ body {
     justify-items: center;
     padding: 5rem 0;
 }
-.t-row {
-    display: grid;
-    justify-items: center;
-    gap: 2rem;
-}
-.preorderForm {
-    width: 720px;
-    color: white;
-}
+
