@@ -1,10 +1,39 @@
 @media screen and (max-width: 768px) {
+    body {
+        /* overflow-x: hidden; */
+    }
     img {
         width: 100%;
     }
-    .s2 img {
-        height: 200px;
+    .s2bag {
+        width: 120px;
     }
+    .s3 {
+        margin-top: -20px;
+    }
+    .s3ad01 {
+        width: 60px;
+        left: 30px;
+        bottom: 100px;
+    } 
+    .s3ad02 {
+        width: 90px;
+        left: 70px;
+        bottom: 10px;
+    }  
+    .s3ad03 {
+        width: 80px;
+        left: 80px;
+        bottom: 160px;
+    }  
+    .s3ad04 {
+        width: 120px;
+        left: 130px;
+        bottom: 30px;
+    }  
+    .s3photoframe {
+        width: 150px;
+    }   
     .btn_action {
         scale: .6;
     }
@@ -40,6 +69,29 @@
         justify-items: center;
     }
     .s4 img {
-        width: 115%;
+        width: 120%;
+    }
+    .s5 {
+        margin-top: -2px;
+    }
+    .boxSlide {
+        width: 300%;
+    }
+    .boxSlide .box {
+        margin-left: -1px;
+    }
+    .btn_action {
+        width: 197px;
+        height: 42px;
+        background-size: 100%;
+        border-radius: 12px;
+        animation: pentalsL 2s ease-in-out infinite;
+    }
+    .pentalL {
+        width: 16px!important;
+    }
+    .s5 .boxSlide .box:nth-child(1) .btn_action {
+        left: 0;
+        bottom: 0;
     }
 }
