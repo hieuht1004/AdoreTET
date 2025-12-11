@@ -1,9 +1,13 @@
 @media screen and (max-width: 768px) {
     body {
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
     img {
         width: 100%;
+    }
+    .s1 .btn_action {
+        bottom: 20px;
+        left: calc(50% - 98px);
     }
     .s2BG {
         width: 120%;
@@ -98,7 +102,39 @@
         width: 16px!important;
     }
     .s5 .boxSlide .box:nth-child(1) .btn_action {
-        left: 0;
-        bottom: 0;
+        left: 20px;
+        bottom: 20px;
+    }
+    .s5 .boxSlide .box:nth-child(2) .btn_action {
+        left: 32px;
+        bottom: 20px;
+    }
+    .s5 .boxSlide .box:nth-child(3) .btn_action {
+        left: 122px;
+        bottom: 20px;
+    }
+    .s6 .boxSlide .box:nth-child(1) .btn_action {
+        left: 120px;
+        bottom: 20px;
+    }
+    .s6 .boxSlide .box:nth-child(2) .btn_action {
+        left: 124px;
+        bottom: 20px;
+    }
+    .s6 .boxSlide .box:nth-child(3) .btn_action {
+        left: 122px;
+        bottom: 20px;
+    }
+    .s7 .boxSlide .box:nth-child(1) .btn_action {
+        left: 124px;
+        bottom: 40px;
+    }
+    .s7 .boxSlide .box:nth-child(2) .btn_action {
+        left: 160px;
+        bottom: 80px;
+    }
+    .s7 .boxSlide .box:nth-child(3) .btn_action {
+        left: 105px;
+        bottom: 120px;
     }
 }
