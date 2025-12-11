@@ -5,11 +5,18 @@
     img {
         width: 100%;
     }
+    .s2BG {
+        width: 120%;
+    }
     .s2bag {
         width: 120px;
     }
     .s3 {
         margin-top: -20px;
+    }
+    .s3BG {
+        width: 120%;
+        margin-left: -9%;
     }
     .s3ad01 {
         width: 60px;
