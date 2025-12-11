@@ -112,6 +112,7 @@ body {
 .mainform {
     background: url(assets/mainformBG.png) top center no-repeat;
     padding: 10rem 0 5rem 0;
+    background-size: 100% auto;
 }
 .mainformcontainer {
     display: grid;
