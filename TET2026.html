@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre-order Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link
+      rel="icon"
+      href="//theme.hstatic.net/1000277297/1001296355/14/favicon.png?v=696"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <section class="s1">
+      <img style="width: 100%" src="assets/s1.jpg" alt="" />
+      <button class="btn_action">
+        <img class="pentalL" src="assets/pentalL.png" alt="" />
+        <img class="pentalM" src="assets/pentalM.png" alt="" />
+        <img class="pentalS" src="assets/pentalS.png" alt="" />
+      </button>
+    </section>
+    <section class="sSlide s2">
+      <div class="boxSlide">
+        <img src="assets/slide.jpg" alt="" />
+      </div>
+    </section>
+    <section class="mainform">
+      <div class="mainformcontainer">
+        <div class="t-row">
+          <img src="assets/mainform01.png" alt="" />
+        </div>
+        <form id="preorderForm" class="preorderForm">
+          <h3 style="padding-bottom: 1rem">Thông tin khách hàng</h3>
+          <div class="form-inline">
+            <div class="form-group">
+              <label>Họ và tên</label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="form-group">
+              <label>Số điện thoại</label>
+              <input type="text" name="phone" required />
+            </div>
+          </div>
+
+          <h3 style="padding: 2rem 0 1rem 0">Sản phẩm</h3>
+          <div id="productList">
+            <div class="product-row">
+              <select name="product" required>
+                <option value="" disabled selected>Chọn sản phẩm</option>
+                <option value="ÁO DÀI CẨM DUNG">ÁO DÀI CẨM DUNG</option>
+                <option value="ÁO DÀI DAO HUYỀN">ÁO DÀI DAO HUYỀN</option>
+                <option value="ÁO DÀI NGỌC TƯỜNG">ÁO DÀI NGỌC TƯỜNG</option>
+
+                <option value="ÁO DÀI LAM TƯỜNG">ÁO DÀI LAM TƯỜNG</option>
+                <option value="ÁO DÀI CÁT TƯỜNG">ÁO DÀI CÁT TƯỜNG</option>
+                <option value="ÁO DÀI DIỄM TƯỜNG ">ÁO DÀI DIỄM TƯỜNG</option>
+
+                <option value="ÁO DÀI A MỊ">ÁO DÀI A MỊ</option>
+                <option value="ÁO DÀI THỊ TẤM">ÁO DÀI THỊ TẤM</option>
+                <option value="ÁO DÀI NGUYỆT CẦM">ÁO DÀI NGUYỆT CẦM</option>
+              </select>
+
+              <select name="size" required>
+                <option value="" disabled selected>Kích thước</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+
+              <select name="type" required>
+                <option value="" disabled selected>Phân loại</option>
+                <option value="Người lớn">Người lớn</option>
+                <option value="Trẻ em">Trẻ em</option>
+              </select>
+
+              <input
+                type="number"
+                name="quantity"
+                min="1"
+                required
+                placeholder="Số lượng"
+              />
+
+              <button type="button" class="remove-btn">X</button>
+            </div>
+          </div>
+
+          <button type="button" id="addProductBtn" class="add-btn">
+            + Thêm sản phẩm
+          </button>
+
+          <h3 style="padding: 2rem 0 1rem 0">Hình thức nhận hàng</h3>
+
+          <div class="form-inline shipping">
+            <div class="form-group">
+              <label>Nhận tại cửa hàng</label>
+              <select name="store">
+                <option value="" disabled selected>Chọn cửa hàng</option>
+                <option value="Store 1">Store 1</option>
+                <option value="Store 2">Store 2</option>
+                <option value="Store 3">Store 3</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Hoặc nhận hàng online (điền địa chỉ)</label>
+              <textarea name="address" placeholder="Nhập địa chỉ"></textarea>
+            </div>
+          </div>
+
+          <div class="btn-form">
+            <button class="btn_action submit-btn" type="submit">
+              <img class="pentalL" src="assets/pentalL.png" alt="" />
+              <img class="pentalM" src="assets/pentalM.png" alt="" />
+              <img class="pentalS" src="assets/pentalS.png" alt="" />
+            </button>
+          </div>
+        </form>
+        <div class="t-row3col">
+          <div style="padding-top: 60px">
+            <img src="assets/mainform02a.png" alt="" />
+          </div>
+          <div><img src="assets/mainform02b.png" alt="" /></div>
+          <div style="padding-top: 60px">
+            <img src="assets/mainform02c.png" alt="" />
+          </div>
+        </div>
+        <div class="t-row">
+          <img src="assets/mainform03.png" alt="" />
+          <img src="assets/mainform_logo.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Toast -->
+    <div id="toast" class="toast">
+      <span id="toastIcon"></span>
+      <span id="toastMessage"></span>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+input, select, textarea {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.preorderForm .form-inline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+} 
+.preorderForm label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.add-btn {
+    background: #c9922d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.product-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.shipping .form-group {
+    padding: 2rem;
+    border:  1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+.btn-form {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Toast message */
+.toast {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    background: #333;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    bottom: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Spinner */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}

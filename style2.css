@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+ul, li, ol {
+    list-style-type: none;
+}
+button, input, a {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+.btn_action {
+    width: 300px;
+    height: 64px;
+    background: url(../assets/button.png) center center no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    border-radius: 18px;
+    transition: all ease-in-out .5s;
+    border-radius: 18px;
+}
+.btn_action img {
+    position: absolute;
+    width: auto;
+    opacity: 0;  
+    display: none;
+}
+.btn_action:hover, .btn_action:focus {
+    background: url(../assets/button_hover.png) center center no-repeat;
+    transform: translateY(-4px);
+}
+.btn_action:hover > img,
+.btn_action:focus > img {
+    opacity: 1;
+    display: block;
+}
+.pentalL {
+    right: -20px;
+    top: -20px;
+    animation: pentalsL 3s ease-in-out infinite;
+    transition: all ease-in-out .5s;
+}
+.pentalM {
+    right: 20px;
+    bottom: -14px;
+    animation: pentalsM 3s ease-in-out infinite;
+    transition: all ease-in-out 1s;
+}
+.pentalS {
+    left: 10px;
+    top: -10px;
+    animation: pentalsS 3s ease-in-out infinite;
+    transition: all ease-in-out .2s;
+}
+@keyframes pentalsL {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+@keyframes pentalsM {
+    0%, 100% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(-10px); 
+    }
+}
+@keyframes pentalsS {
+    0%, 100% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(10px); 
+    }
+}
+
+.s1 {
+    position: relative;
+}
+.s1 .btn_action {
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 150px);
+}
+.s2 {
+    margin-top: -8px;
+}
+.boxSlide {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.boxSlide img {
+    width: auto;
+}
+.mainform {
+    background: url(assets/mainformBG.png) top center no-repeat;
+    padding: 10rem 0 5rem 0;
+}
+.mainformcontainer {
+    display: grid;
+    justify-items: center;
+}
+.t-row3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-items: center;
+    padding: 5rem 0;
+}
+.t-row {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+.preorderForm {
+    width: 720px;
+    color: white;
+}

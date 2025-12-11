@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+    .s2 img {
+        height: 200px;
+    }
+    .btn_action {
+        scale: .6;
+    }
+}

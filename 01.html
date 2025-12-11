@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chọn sản phẩm</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .product-list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+
+      .product-card {
+        width: 150px;
+        border: 2px solid transparent;
+        padding-bottom: 10px;
+        transition: 0.2s;
+      }
+
+      .product-card.selected {
+        border-color: #f7a8a8;
+        background: #fff8f8;
+      }
+
+      .thumb {
+        width: 100%;
+        height: 120px;
+        background: #ccc;
+        margin-bottom: 5px;
+      }
+
+      .choose-btn {
+        background: black;
+        color: white;
+        width: 100%;
+        padding: 8px 0;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .choose-btn.cancel {
+        background: #d33;
+      }
+
+      .form-box {
+        width: 400px;
+        margin: 0 auto;
+        border: 1px solid #888;
+        padding: 20px;
+        text-align: left;
+      }
+
+      .chosen-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .chosen-thumb {
+        width: 60px;
+        height: 60px;
+        background: #ccc;
+      }
+
+      .remove-btn {
+        color: #d33;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Danh sách sản phẩm</h2>
+
+    <div class="product-list">
+      <div
+        class="product-card"
+        data-id="1"
+        data-name="Sản phẩm A"
+        data-price="270000"
+      >
+        <div class="thumb"></div>
+        <button class="choose-btn">Chọn sản phẩm này</button>
+        <div>Tên sản phẩm A</div>
+        <div>270.000đ</div>
+      </div>
+
+      <div
+        class="product-card"
+        data-id="2"
+        data-name="Sản phẩm B"
+        data-price="310000"
+      >
+        <div class="thumb"></div>
+        <button class="choose-btn">Chọn sản phẩm này</button>
+        <div>Tên sản phẩm B</div>
+        <div>310.000đ</div>
+      </div>
+
+      <div
+        class="product-card"
+        data-id="3"
+        data-name="Sản phẩm C"
+        data-price="199000"
+      >
+        <div class="thumb"></div>
+        <button class="choose-btn">Chọn sản phẩm này</button>
+        <div>Tên sản phẩm C</div>
+        <div>199.000đ</div>
+      </div>
+    </div>
+
+    <h2>Form</h2>
+
+    <div class="form-box" id="chosenProductBox">
+      <strong>Sản phẩm đã chọn:</strong>
+      <div id="output"></div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".product-card");
+      const output = document.getElementById("output");
+
+      let chosenProducts = {}; // lưu theo id
+
+      cards.forEach((card) => {
+        const btn = card.querySelector(".choose-btn");
+
+        btn.addEventListener("click", () => {
+          const id = card.dataset.id;
+          const name = card.dataset.name;
+          const price =
+            Number(card.dataset.price).toLocaleString("vi-VN") + "đ";
+
+          // Nếu đã chọn → hủy chọn
+          if (chosenProducts[id]) {
+            delete chosenProducts[id];
+            card.classList.remove("selected");
+            btn.textContent = "Chọn sản phẩm này";
+            btn.classList.remove("cancel");
+          } else {
+            // Chọn mới
+            chosenProducts[id] = { id, name, price };
+            card.classList.add("selected");
+            btn.textContent = "Hủy chọn";
+            btn.classList.add("cancel");
+          }
+
+          renderForm();
+        });
+      });
+
+      function renderForm() {
+        output.innerHTML = "";
+
+        Object.values(chosenProducts).forEach((item) => {
+          const div = document.createElement("div");
+          div.classList.add("chosen-item");
+          div.innerHTML = `
+                <div class="chosen-thumb"></div>
+                <div>
+                    <div>${item.name}</div>
+                    <div>${item.price}</div>
+                    <span class="remove-btn" data-id="${item.id}">Xóa</span>
+                </div>
+            `;
+          output.appendChild(div);
+        });
+
+        // Event: Xóa trong form
+        document.querySelectorAll(".remove-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const id = btn.dataset.id;
+
+            // Xóa trong danh sách chọn
+            delete chosenProducts[id];
+
+            // Reset UI ở trên
+            const card = document.querySelector(
+              `.product-card[data-id="${id}"]`
+            );
+            const cardBtn = card.querySelector(".choose-btn");
+            card.classList.remove("selected");
+            cardBtn.textContent = "Chọn sản phẩm này";
+            cardBtn.classList.remove("cancel");
+
+            // Render lại form
+            renderForm();
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
