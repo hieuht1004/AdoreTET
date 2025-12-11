@@ -1,6 +1,10 @@
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+    input {
+        font-size: 1rem;
+    }
+    select {
+        height: 34px;
+        color: black;
     }
     img {
         width: 100%;
@@ -8,6 +12,9 @@
     .s1 .btn_action {
         bottom: 20px;
         left: calc(50% - 98px);
+    }
+    .s2 {
+        overflow: hidden;
     }
     .s2BG {
         width: 120%;
@@ -17,6 +24,7 @@
     }
     .s3 {
         margin-top: -20px;
+        overflow: hidden;
     }
     .s3BG {
         width: 120%;
@@ -85,8 +93,11 @@
     .s5 {
         margin-top: -2px;
     }
+    .s5, .s6, .s7 {
+        overflow-x: scroll;
+    }
     .boxSlide {
-        width: 300%;
+        width: 400%;
     }
     .boxSlide .box {
         margin-left: -1px;
@@ -101,6 +112,52 @@
     .pentalL {
         width: 16px!important;
     }
+    
+    .shipping .form-group {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    }
+}
+@media screen and (max-width: 430px) {
+    .s5 .boxSlide .box:nth-child(1) .btn_action {
+        left: 80px;
+        bottom: 50px;
+    }
+    .s5 .boxSlide .box:nth-child(2) .btn_action {
+        left: 100px;
+        bottom: 50px;
+    }
+    .s5 .boxSlide .box:nth-child(3) .btn_action {
+        left: 222px;
+        bottom: 50px;
+    }
+    .s6 .boxSlide .box:nth-child(1) .btn_action {
+        left: 220px;
+        bottom: 50px;
+    }
+    .s6 .boxSlide .box:nth-child(2) .btn_action {
+        left: 220px;
+        bottom: 40px;
+    }
+    .s6 .boxSlide .box:nth-child(3) .btn_action {
+        left: 222px;
+        bottom: 50px;
+    }
+    .s7 .boxSlide .box:nth-child(1) .btn_action {
+        left: 224px;
+        bottom: 60px;
+    }
+    .s7 .boxSlide .box:nth-child(2) .btn_action {
+        left: 270px;
+        bottom: 160px;
+    }
+    .s7 .boxSlide .box:nth-child(3) .btn_action {
+        left: 155px;
+        bottom: 160px;
+    }
+}
+@media screen and (max-width: 393px) {
     .s5 .boxSlide .box:nth-child(1) .btn_action {
         left: 20px;
         bottom: 20px;
@@ -137,9 +194,5 @@
         left: 105px;
         bottom: 120px;
     }
-    .shipping .form-group {
-        padding: 0;
-        border: 0;
-        border-radius: 0;
-    }
 }
+
