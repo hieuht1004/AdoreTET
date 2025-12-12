@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Swiper Cuộn Vô Cực (3 Items)</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px 0;
+        background-color: #f4f4f4;
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 40px;
+        color: #333;
+      }
+
+      /* Cấu hình kích thước và giao diện chung của Swiper */
+      .swiper {
+        width: 100%; /* Chiều rộng container (tăng lên để dễ nhìn) */
+        height: 1200px; /* Chiều cao cố định */
+        margin: 20px auto;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Đặt màu nền riêng biệt cho 3 item cơ bản */
+      .slide-color-1 {
+        background-color: #f44336;
+      } /* Đỏ */
+      .slide-color-2 {
+        background-color: #2196f3;
+      } /* Xanh dương */
+      .slide-color-3 {
+        background-color: #4caf50;
+      } /* Xanh lá */
+
+      /* Định dạng cho các nút điều hướng */
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #007aff !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>3 Swiper Hoạt động Độc lập</h1>
+    <p style="text-align: center">
+      Mỗi slider bên dưới đều có 3 item và cuộn vô cực.
+    </p>
+
+    <h2>Slider 1: Sản phẩm Nổi bật</h2>
+    <div class="swiper mySwiper-1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-color-1">S1 - Item A</div>
+        <div class="swiper-slide slide-color-2">S1 - Item B</div>
+        <div class="swiper-slide slide-color-3">S1 - Item C</div>
+      </div>
+
+      <div class="swiper-button-next next-1"></div>
+      <div class="swiper-button-prev prev-1"></div>
+    </div>
+
+    <h2>Slider 2: Bài viết Mới</h2>
+    <div class="swiper mySwiper-2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-color-3">S2 - Bài 1</div>
+        <div class="swiper-slide slide-color-1">S2 - Bài 2</div>
+        <div class="swiper-slide slide-color-2">S2 - Bài 3</div>
+      </div>
+
+      <div class="swiper-button-next next-2"></div>
+      <div class="swiper-button-prev prev-2"></div>
+    </div>
+
+    <h2>Slider 3: Thư viện Ảnh</h2>
+    <div class="swiper mySwiper-3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-color-2">S3 - Ảnh Alpha</div>
+        <div class="swiper-slide slide-color-3">S3 - Ảnh Beta</div>
+        <div class="swiper-slide slide-color-1">S3 - Ảnh Gamma</div>
+      </div>
+
+      <div class="swiper-button-next next-3"></div>
+      <div class="swiper-button-prev prev-3"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      // Cấu hình chung cho tất cả các slider (nếu chúng giống nhau)
+      const commonConfig = {
+        slidesPerView: 1, // Hiển thị 1 item
+        spaceBetween: 0,
+        loop: true, // Bật chế độ lặp vô cực
+        // Tùy chọn thêm:
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+      };
+
+      // 1. Khởi tạo Slider 1
+      const swiper1 = new Swiper(".mySwiper-1", {
+        ...commonConfig, // Sử dụng cấu hình chung
+        navigation: {
+          nextEl: ".next-1", // Trỏ đúng đến nút của Slider 1
+          prevEl: ".prev-1",
+        },
+      });
+
+      // 2. Khởi tạo Slider 2
+      const swiper2 = new Swiper(".mySwiper-2", {
+        ...commonConfig,
+        navigation: {
+          nextEl: ".next-2", // Trỏ đúng đến nút của Slider 2
+          prevEl: ".prev-2",
+        },
+        // Ví dụ: Slider 2 có thể khác về số lượng slide hiển thị
+        // slidesPerView: 2,
+      });
+
+      // 3. Khởi tạo Slider 3
+      const swiper3 = new Swiper(".mySwiper-3", {
+        ...commonConfig,
+        navigation: {
+          nextEl: ".next-3", // Trỏ đúng đến nút của Slider 3
+          prevEl: ".prev-3",
+        },
+      });
+
+      console.log(
+        "Đã khởi tạo thành công 3 Swiper độc lập với chế độ cuộn vô cực."
+      );
+    </script>
+  </body>
+</html>

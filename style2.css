@@ -1,9 +1,25 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Averta';
+  src: url('fonts/Averta-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url('fonts/Averta-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Averta;
 }
 html {
     scroll-behavior: smooth;
@@ -39,12 +55,12 @@ body {
 }
 .btn_action:hover,
 .btn_action:focus {
-    animation: pentalsL 2s ease-in-out infinite;
+    animation: pentalsL 6s ease-in-out infinite;
 }
 .pentalL {
     right: -10px;
     top: 0px;
-    animation: pentalsL 3s ease-in-out infinite;
+    animation: pentalsL 6s ease-in-out infinite;
     transition: all ease-in-out .5s;
 }
 .pentalM {
@@ -105,7 +121,7 @@ body {
     position: absolute;
     right: 20px;
     bottom: 0px;
-    animation: pentalsL 2s ease-in-out infinite;
+    animation: pentalsL 6s ease-in-out infinite;
 }
 .s3 {
     position: relative;
@@ -133,14 +149,14 @@ body {
     z-index: 1;
 }
 .s3ad04 {
-    left: 700px;
+    left: 600px;
     bottom: 150px;
     z-index: 1;
 }
 .s3photoframe {
     right: 0;
     top: 50%;
-    width: 500px;
+    width: 700px;
 }
 .s4 {
     margin-top: -8px;
@@ -148,58 +164,46 @@ body {
 .s5 {
     margin-top: -8px;
 }
-.s5 .boxSlide .btn_action,
-.s6 .boxSlide .btn_action,
-.s7 .boxSlide .btn_action {
+.s5 .btn_action,
+.s6 .btn_action,
+.s7 .btn_action {
     position: absolute;
     bottom: 200px;
 }
-.s5 .boxSlide .box:nth-child(1) .btn_action {
-    left: 400px;
+.s5 .swiper-slide:nth-child(1) .btn_action {
+    left: 300px;
 }
-.s5 .boxSlide .box:nth-child(2) .btn_action {
-    left: 460px;
+.s5 .swiper-slide:nth-child(2) .btn_action {
+    left: 360px;
 }
-.s5 .boxSlide .box:nth-child(3) .btn_action {
+.s5 .swiper-slide:nth-child(3) .btn_action {
+    left: 770px;
+}
+.s6 .swiper-slide:nth-child(1) .btn_action {
+    left: 770px;
+}
+.s6 .swiper-slide:nth-child(2) .btn_action {
+    left: 770px;
+}
+.s6 .swiper-slide:nth-child(3) .btn_action {
+    left: 770px;
+}
+.s7 .swiper-slide:nth-child(1) .btn_action {
     left: 870px;
+    bottom: 300px;
 }
-.s6 .boxSlide .box:nth-child(1) .btn_action {
-    left: 870px;
-}
-.s6 .boxSlide .box:nth-child(2) .btn_action {
-    left: 870px;
-}
-.s6 .boxSlide .box:nth-child(3) .btn_action {
-    left: 870px;
-}
-.s7 .boxSlide .box:nth-child(1) .btn_action {
-    left: 870px;
-}
-.s7 .boxSlide .box:nth-child(2) .btn_action {
+.s7 .swiper-slide:nth-child(2) .btn_action {
     left: 1030px;
     bottom: 600px;
 }
-.s7 .boxSlide .box:nth-child(3) .btn_action {
+.s7 .swiper-slide:nth-child(3) .btn_action {
     left: 650px;
     bottom: 600px;
 }
-.boxSlide {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.boxSlide .box {
-    position: relative;
-    display: grid;
-}
-.custom-scrollable {
-    scrollbar-width: thin; 
-    scrollbar-color: #FFF0D3 black;
-}
+
 .s8 {
     display: flex;
+    margin-top: -50px;
 }
 .mainform {
     background: url(assets/mainformBG.png) top center no-repeat #550607;
@@ -212,7 +216,7 @@ body {
 }
 .t-row {
     display: grid;
-    gap: 2rem;
+    gap: 4rem;
     justify-items: center;
 }
 .t-row3col {
@@ -221,5 +225,34 @@ body {
     grid-template-rows: repeat(1, 1fr);
     justify-items: center;
     padding: 5rem 0;
+}
+
+
+/* Cấu hình kích thước và giao diện chung của Swiper */
+.swiper {
+    position: relative;
+}
+.mySwiper-1 {
+    width: 100%;
+    height: 1453px;
+}
+.mySwiper-2 {
+    width: 100%;
+    height: 1388px;
+}
+.mySwiper-3 {
+    width: 100%;
+    height: 1489px;
+}
+
+/* Định dạng cho các nút điều hướng */
+    .swiper-button-next,
+    .swiper-button-prev {
+    color: white !important;
+    transform: scale(.75);
+}
+
+.onlymobile {
+    display: none;
 }
 

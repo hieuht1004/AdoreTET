@@ -17,7 +17,7 @@
         overflow: hidden;
     }
     .s2BG {
-        width: 120%;
+        
     }
     .s2bag {
         width: 120px;
@@ -70,13 +70,11 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .t-row3col {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
-        padding: 0 4rem;
         margin-bottom: 4rem;
     }
     .t-row {
-        gap: 1rem;
+        gap: 4rem;
+        font-size: 12px;
     }
     .mainform_logo {
         width: 120px;
@@ -121,6 +119,17 @@
     .t-row3col div:nth-child(2) {
         padding-top: 60px;
     }
+    .onlymobile {
+        display: block;
+    }
+    .onlyweb {
+        display: none;
+    }
+    .btn_action.onlymobile {
+        bottom: 20px;
+        left: calc(50% - 80px);
+        z-index: 10;
+    }
 }
 @media screen and (max-width: 430px) {
     .btn-form .btn_action {
@@ -128,79 +137,42 @@
         height: 72px;
         background-size: 100%;
     }
-    .s5 .boxSlide .box:nth-child(1) .btn_action {
-        left: 80px;
-        bottom: 50px;
+    .t-row3col {
+        padding:0;
     }
-    .s5 .boxSlide .box:nth-child(2) .btn_action {
-        left: 100px;
-        bottom: 50px;
+    .mainform02a,
+    .mainform02c {
+        width: 90px;
     }
-    .s5 .boxSlide .box:nth-child(3) .btn_action {
-        left: 222px;
-        bottom: 50px;
+    .mainform02b {
+        width: 160px;
     }
-    .s6 .boxSlide .box:nth-child(1) .btn_action {
-        left: 220px;
-        bottom: 50px;
+    .t-row3col div:nth-child(2) {
+        padding-top: 44px;
     }
-    .s6 .boxSlide .box:nth-child(2) .btn_action {
-        left: 220px;
-        bottom: 40px;
+    .mySwiper-1 {
+        height: 321px;
     }
-    .s6 .boxSlide .box:nth-child(3) .btn_action {
-        left: 222px;
-        bottom: 50px;
+    .mySwiper-2 {
+        width: 100%;
+        height: 307px;
     }
-    .s7 .boxSlide .box:nth-child(1) .btn_action {
-        left: 224px;
-        bottom: 60px;
-    }
-    .s7 .boxSlide .box:nth-child(2) .btn_action {
-        left: 270px;
-        bottom: 160px;
-    }
-    .s7 .boxSlide .box:nth-child(3) .btn_action {
-        left: 155px;
-        bottom: 160px;
+    .mySwiper-3 {
+        width: 100%;
+        height: 329px;
     }
 }
 @media screen and (max-width: 393px) {
-    .s5 .boxSlide .box:nth-child(1) .btn_action {
-        left: 60px;
-        bottom: 20px;
+    .mySwiper-1 {
+        height: 296px;
     }
-    .s5 .boxSlide .box:nth-child(2) .btn_action {
-        left: 76px;
-        bottom: 50px;
+    .mySwiper-2 {
+        width: 100%;
+        height: 284px;
     }
-    .s5 .boxSlide .box:nth-child(3) .btn_action {
-        left: 190px;
-        bottom: 50px;
-    }
-    .s6 .boxSlide .box:nth-child(1) .btn_action {
-        left: 190px;
-        bottom: 20px;
-    }
-    .s6 .boxSlide .box:nth-child(2) .btn_action {
-        left: 188px;
-        bottom: 40px;
-    }
-    .s6 .boxSlide .box:nth-child(3) .btn_action {
-        left: 185px;
-        bottom: 40px;
-    }
-    .s7 .boxSlide .box:nth-child(1) .btn_action {
-        left: 188px;
-        bottom: 50px;
-    }
-    .s7 .boxSlide .box:nth-child(2) .btn_action {
-        left: 230px;
-        bottom: 120px;
-    }
-    .s7 .boxSlide .box:nth-child(3) .btn_action {
-        left: 140px;
-        bottom: 160px;
+    .mySwiper-3 {
+        width: 100%;
+        height: 304px;
     }
 }
 

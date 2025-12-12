@@ -4,6 +4,7 @@ input, select, textarea {
     border-radius: 6px;
     border: none;
     outline: none;
+    color: #510506;
 }
 .preorderForm {
     max-width: 720px;
