@@ -1,7 +1,7 @@
   // fade in up
   gsap.utils.toArray(".fade-up").forEach(el => {
     gsap.from(el, {
-      y: 100,
+      y: 50,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
@@ -16,7 +16,7 @@
    // fade in down
   gsap.utils.toArray(".fade-down").forEach(el => {
     gsap.from(el, {
-      y: -100,
+      y: -50,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
@@ -31,7 +31,7 @@
   // fade in left
   gsap.utils.toArray(".fade-left").forEach(el => {
     gsap.from(el, {
-      x: -100,
+      x: -50,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
@@ -46,7 +46,7 @@
   // fade in right
   gsap.utils.toArray(".fade-right").forEach(el => {
     gsap.from(el, {
-      x: 100,
+      x: 50,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
