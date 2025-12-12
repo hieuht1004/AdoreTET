@@ -22,6 +22,42 @@
     .s3photoframe {
         width: 500px;
     }
+    .s5 .swiper-slide:nth-child(1) .btn_action {
+        left: 200px;
+        bottom: 150px;
+    }
+    .s5 .swiper-slide:nth-child(2) .btn_action {
+        left: 250px;
+        bottom: 150px;
+    }
+    .s5 .swiper-slide:nth-child(3) .btn_action {
+        left: 550px;
+        bottom: 150px;
+    }
+    .s6 .swiper-slide:nth-child(1) .btn_action {
+        left: 570px;
+        bottom: 150px;
+    }
+    .s6 .swiper-slide:nth-child(2) .btn_action {
+        left: 560px;
+        bottom: 150px;
+    }
+    .s6 .swiper-slide:nth-child(3) .btn_action {
+        left: 560px;
+        bottom: 150px;
+    }
+    .s7 .swiper-slide:nth-child(1) .btn_action {
+        left: 490px;
+        bottom: 220px;
+    }
+    .s7 .swiper-slide:nth-child(2) .btn_action {
+        left: 680px;
+        bottom: 350px;
+    }
+    .s7 .swiper-slide:nth-child(3) .btn_action {
+        left: 490px;
+        bottom: 400px;
+    }
 }
 
 @media screen and (max-width: 768px) {
